@@ -1,0 +1,11 @@
+.front {
+  &__logo {
+    width: 300px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &__content {
+      display: flex;
+    }
+  }
+}

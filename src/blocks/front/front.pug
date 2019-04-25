@@ -1,0 +1,7 @@
+mixin front(modifier)
+  section.front&attributes(attributes)
+    +logo("front__logo")(width="200")
+    +contacts("front__contacts")
+    .front__text
+      p.front__lead #{l.front.lead}
+      p.front__description #{l.front.description}
