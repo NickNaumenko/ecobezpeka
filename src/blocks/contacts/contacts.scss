@@ -1,0 +1,32 @@
+.contacts {
+  padding: 0;
+  font: inherit;
+
+  &__list {
+    @include list-style;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+    fill: currentColor;
+  }
+
+  &__email {
+    text-transform: lowercase;
+  }
+
+  &__link:hover {
+    color: $secondary-color;
+  }
+}
