@@ -1,0 +1,14 @@
+@import "mixins";
+@import "variables";
+@import "scaffolding";
+
+// blocks
+@import "../blocks/page-header/page-header.scss";
+@import "../blocks/toggle-button/toggle-button.scss";
+@import "../blocks/contacts/contacts.scss";
+@import "../blocks/main-menu/main-menu.scss";
+@import "../blocks/page-footer/page-footer.scss";
+@import "../blocks/socials/socials.scss";
+@import "../blocks/directions/directions.scss";
+@import "../blocks/front/front.scss";
+@import "../blocks/logo/logo.scss";
