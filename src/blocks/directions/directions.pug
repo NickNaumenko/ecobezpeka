@@ -4,4 +4,4 @@ mixin directions(modifier)
     ul.directions__list
       each val, index in l.directions.list
         li.directions__item
-          a.directions__link(class=`directions__link--${index}` href=val.link) #{val.text}
+          a.directions__link(class=`directions__link--${index} ${modifier}` href=val.link) #{val.text}
