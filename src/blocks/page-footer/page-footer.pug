@@ -1,0 +1,12 @@
+mixin page-footer
+  footer.page-footer&attributes(attributes)
+    .container
+      .page-footer__content
+        +contacts
+        +directions
+        +socials
+
+      p
+      | &copy; 2016 |
+      i.fa.fa-value(aria-hidden='true') &nbsp;
+      a(href='#') View Source
