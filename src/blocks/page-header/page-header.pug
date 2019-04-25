@@ -1,0 +1,10 @@
+mixin page-header(page)
+  header.page-header&attributes(attributes)
+    .container
+      .page-header__content
+        .page-header__top
+          +logo
+          //- +contacts(class="page-header__contacts")
+        .page-header__nav
+          +main-menu(page)
+        +toggle-button(class="page-header__toggle")
