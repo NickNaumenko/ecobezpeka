@@ -1,0 +1,17 @@
+extends ../templates/template.pug
+block content
+  +page-header("index.html")
+  main.page-main
+    .container.page-main__directions
+      +front
+    .container.page-main__directions
+      +directions
+    .container.page-main__advantages
+      +advantages
+    .container.page-main__clients
+      +clients
+
+
+  //- h1 #{l.lang}
+  //- p #{l["main-menu"].home}
+  +page-footer
