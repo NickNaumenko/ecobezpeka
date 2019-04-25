@@ -1,0 +1,10 @@
+doctype html
+html(lang= l.lang)
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+
+  body
+    .div(style="display:none")
+      include ../../build/img/sprite.svg
+    block content
+    script(src="../js/scripts.js?version=1")
