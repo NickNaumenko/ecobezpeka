@@ -1,0 +1,36 @@
+.main-menu {
+  &__list {
+    @include list-style;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__submenu {
+    position: relative;
+  }
+
+  &__submenu-content {
+    display: none;
+    position: absolute;
+    background-color: $secondary-color;
+  }
+
+  &__submenu:hover &__submenu-content {
+    display: block;
+    right: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-menu {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
