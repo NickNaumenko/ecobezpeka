@@ -1,0 +1,52 @@
+.toggle-button {
+  @include button;
+  @include transition;
+  // position: relative;
+
+  width: 60px;
+  height: 60px;
+
+  &__bar,
+  &::before,
+  &::after {
+    @include transition;
+
+    content: "";
+
+    position: absolute;
+    top: 29px;
+    left: 10px;
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: red;
+  }
+
+  &__bar:nth-of-type(2) {
+    top: 14px;
+  }
+
+  &__bar:last-of-type {
+    top: 44px;
+  }
+
+  outline: 1px solid red;
+}
+
+.menu-open {
+  .toggle-button {
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      box-shadow: none;
+    }
+
+    &__bar {
+      opacity: 0;
+    }
+  }
+}
