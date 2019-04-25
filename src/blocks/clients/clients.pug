@@ -1,0 +1,9 @@
+mixin clients
+  section.clients&attributes(attributes)
+    h2 #{l.clients.title}
+    ul.clients__list
+      each val in l.clients.list
+        li.clients__item
+          a.clients__link(href=val.link)
+            span.visually-hidden #{val.title}
+            img(src=val.logo, alt=val.title)
