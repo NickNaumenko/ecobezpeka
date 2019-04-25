@@ -1,25 +1,18 @@
 mixin contacts(modifier)
-  section.contacts&attributes(attributes)
-    h2.contacts__title #{l.contacts.title}
-    address.contacts__content
-      ul.contacts__list
+  address.contacts(class=modifier)&attributes(attributes)
+    ul.contacts__list
+      each val in l.contacts.list
         li.contacts__item
-          a.contacts__link.contacts__phone(href="tel:+380634425349") +38(068)442-53-49
-            svg.contacts__icon(width="20" height="20")
-              use(xlink:href="#icon-phone")
-        li.contacts__item
-          a.contacts__link.contacts__phone(href="tel:+380946615490") +38(094)661-54-90
-            svg.contacts__icon(width="20" height="20")
-              use(xlink:href="#icon-phone")
-        li.contacts__item
-          a.contacts__link.contacts__phone(href="tel:+380664002494") +38(066)400-24-94
-            svg.contacts__icon(width="20" height="20")
-              use(xlink:href="#icon-phone")
-        li.contacts__item
-          a.contacts__link.contacts__phone(href="tel:+380968502818") +38(096)850-28-18
-            svg.contacts__icon(width="20" height="20")
-              use(xlink:href="#icon-phone")
-        li.contacts__item
-          a.contacts__link.contacts__email(href="mailto:ecobezpeka2018@gmail.com") ecobezpeka2018@gmail.com
-            svg.contacts__icon(width="20" height="20")
-              use(xlink:href="#icon-mail")
+          case val.type
+            when "phone"
+              a.contacts__link.contacts__phone(href=`tel:${val.value}`) #{val.value}
+                svg.contacts__icon(width="20" height="20")
+                  use(xlink:href="#icon-phone")
+            when "email"
+              a.contacts__link.contacts__email(href=`mailto:${val.value}`) #{val.value}
+                svg.contacts__icon(width="20" height="20")
+                  use(xlink:href="#icon-mail")
+            when "address"
+              span.contacts__address #{val.value}
+                svg.contacts__icon(width="20" height="20")
+                  use(xlink:href="#icon-address")

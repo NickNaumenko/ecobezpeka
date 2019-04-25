@@ -2,11 +2,25 @@
   padding: 0;
   font: inherit;
 
+  &--front {
+    font-size: 22px;
+    text-shadow: 1px 1px 2px #000;
+
+    .contacts__address {
+      @include visually-hidden;
+    }
+
+    .contacts__email {
+      font-size: 18px;
+    }
+  }
+
   &__list {
     @include list-style;
   }
 
-  &__link {
+  &__link,
+  &__address {
     position: relative;
     display: inline-block;
     padding-top: 5px;
