@@ -1,0 +1,14 @@
+mixin socials(modifier)
+  sections.socials&attributes(attributes)
+    h2 #{l.socials.title}
+    ul.socials__list
+      li.socials__item
+        a.socials__link(href="#")
+          span.visually-hidden Facebook
+          svg.socials__icon(width="30" height="30")
+              use(xlink:href="#icon-fb")
+      li.socials__item
+        a.socials__link(href="#")
+          span.visually-hidden Twitter
+          svg.socials__icon(width="30" height="30")
+              use(xlink:href="#icon-tw")
