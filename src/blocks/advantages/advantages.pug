@@ -1,0 +1,6 @@
+mixin advantages
+  section.advantages&attributes(attributes)
+    h2.advantages__title #{l.advantages.title}
+    ul.advantages__list
+      each val, index in l.advantages.list
+        li.advantages__item(class=`advantages__item--${index}`)= val
