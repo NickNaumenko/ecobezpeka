@@ -1,18 +1,13 @@
 mixin main-menu(page)
   nav.main-menu
     ul.main-menu__list
-      li.main-menu__item
-        a.main-menu__link(href="./index.html") #{l["main-menu"].home}
-      li.main-menu__item
-        a.main-menu__link(href="./services.html") #{l["main-menu"].services}
-      li.main-menu__item
-        a.main-menu__link(href="./about.html") #{l["main-menu"].about}
-      li.main-menu__item
-        a.main-menu__link(href="./contacts.html") #{l["main-menu"].contacts}
-      li.main-menu__item.main-menu__submenu
-        a.main-menu__link #{l.lang}
-        ul.main-menu__submenu-content
-          li.main-menu__submenu-item
-            a.main-menu__link(href=`../ua/${page}`) ua
-          li.main-menu__submenu-item
-            a.main-menu__link(href=`../ru/${page}`) ru
+      each val in l["main-menu"]
+        li
+          a.main-menu__item(href=val.href)= val.title
+      li
+        span.main-menu__item.main-menu__dropdown-btn #{l.lang}
+        ul.main-menu__dropdown
+          li.main-menu__dropdown-item
+            a.main-menu__item(href=`../ua/${page}`) ua
+          li.main-menu__dropdown-item
+            a.main-menu__item(href=`../ru/${page}`) ru
