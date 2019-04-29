@@ -1,6 +1,6 @@
 mixin socials(modifier)
-  sections.socials&attributes(attributes)
-    h2 #{l.socials.title}
+  section.socials&attributes(attributes)
+    h2(class=modifier.title) #{l.socials.title}
     ul.socials__list
       li.socials__item
         a.socials__link(href="#")

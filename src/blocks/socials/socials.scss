@@ -17,12 +17,12 @@
     height: 30px;
     border-radius: 50%;
     border: 2px solid transparent;
-    fill: $secondary-color;
+    fill: $second-color;
 
     &:hover {
-      fill: $primary-color;
-      background-color: $secondary-color;
-      border: 2px solid $secondary-color;
+      fill: $fourth-color;
+      background-color: $second-color;
+      border: 2px solid $second-color;
     }
   }
 }
