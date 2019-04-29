@@ -3,34 +3,124 @@
     @include list-style;
   }
 
-  &__link {
-    display: inline-block;
+  &__item {
+    display: block;
     padding: 10px 25px;
     text-transform: uppercase;
     cursor: pointer;
+
+    &--dropdown {
+      font-size: 12px;
+    }
   }
 
   &__submenu {
     position: relative;
   }
 
-  &__submenu-content {
+  &__dropdown {
+    @include list-style;
+
+    padding-left: 25px;
     display: none;
-    position: absolute;
-    background-color: $secondary-color;
   }
 
-  &__submenu:hover &__submenu-content {
-    display: block;
-    right: 0;
-  }
-}
+  &__dropdown-btn {
+    position: relative;
 
-@media (min-width: $desktop-width) {
-  .main-menu {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      right: 25px;
+      top: 11px;
+
+      display: block;
+      width: 3px;
+      height: 3px;
+
+      background-color: currentColor;
+    }
+
+    &::after {
+      top: 21px;
+    }
+
+    &.active {
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+
+  @media (min-width: $lg) {
     &__list {
       display: flex;
       flex-wrap: wrap;
     }
+
+    &__item {
+      box-sizing: border-box;
+      min-height: 80px;
+      padding-top: 30px;
+
+      &--dropdown {
+        min-height: 0;
+        padding: 10px 20px;
+        margin-bottom: 5px;
+
+        white-space: nowrap;
+        color: $fourth-color;
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(#000, 0.5);
+      }
+
+      &:hover {
+        color: $second-color;
+      }
+    }
+
+    &__dropdown-btn {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &__dropdown {
+      position: absolute;
+      right: 0;
+    }
+
+    &__dropdown-container {
+      position: relative;
+
+      &:hover {
+        .main-menu__dropdown {
+          display: block;
+        }
+
+        .main-menu__item--dropdown {
+          animation: show 0.3s ease-in both;
+        }
+      }
+    }
+  }
+}
+
+
+// --------
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
