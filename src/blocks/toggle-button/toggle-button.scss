@@ -1,10 +1,12 @@
 .toggle-button {
   @include button;
   @include transition;
-  // position: relative;
+  position: relative;
 
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
+
+  color: inherit;
 
   &__bar,
   &::before,
@@ -14,23 +16,21 @@
     content: "";
 
     position: absolute;
-    top: 29px;
-    left: 10px;
+    top: 19px;
+    left: 0px;
     display: block;
     width: 40px;
     height: 2px;
-    background-color: red;
+    background-color: currentColor;
   }
 
   &__bar:nth-of-type(2) {
-    top: 14px;
+    top: 5px;
   }
 
   &__bar:last-of-type {
-    top: 44px;
+    top: 33px;
   }
-
-  outline: 1px solid red;
 }
 
 .menu-open {
