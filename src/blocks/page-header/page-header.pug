@@ -3,8 +3,11 @@ mixin page-header(page)
     .container
       .page-header__content
         .page-header__top
-          +logo
-          //- +contacts(class="page-header__contacts")
+          .page-header__logo
+            +logo()(src="../img/logo-sm.svg", width="60", height="60")
+          .page-header__contacts
+            a.page-header__phone(href=`tel:${l.contacts.list[0].value}`)= l.contacts.list[0].value
         .page-header__nav
           +main-menu(page)
-        +toggle-button(class="page-header__toggle")
+        .page-header__toggle
+          +toggle-button
