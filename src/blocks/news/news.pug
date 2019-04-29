@@ -1,0 +1,12 @@
+mixin news
+  section.news&attributes(attributes)
+    .news__top
+      h2.news__title News
+      a.news__link(href="#") all news:
+    ul.news__list
+      li.news__item
+        +post
+      li.news__item
+        +post
+      li.news__item
+        +post
