@@ -1,0 +1,142 @@
+.activities {
+  &__list {
+    @include list-style;
+  }
+
+  &__link {
+    @include transition;
+
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &:hover {
+      color: $second-color;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      display: block;
+      width: 15px;
+      height: 2px;
+      background-color: $second-color;
+    }
+  }
+
+  &--images {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    .activities__title {
+      @include section-header;
+      // color: $first-color;
+    }
+
+    .activities__link {
+      min-width: 250px;
+      margin-bottom: 70px;
+      padding: 0;
+      padding-top: 230px;
+      text-align: center;
+
+      &::before {
+        @include transition;
+
+        content: "";
+        top: 0;
+        left: 50%;
+        margin-left: -105px;
+        width: 210px;
+        height: 210px;
+        transform: scale(0.82);
+        transform-origin: 50%;
+
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 23px;
+        left: 50%;
+        margin-left: -83px;
+        display: block;
+
+        width: 166px;
+        height: 166px;
+
+        box-shadow:
+          0 0 0 8px #fff,
+          0 0 0 14px $second-color,
+          0 0 0 23px #fff;
+      }
+
+      &:hover::before {
+        transform: scale(1);
+      }
+
+      &.activities__link--air-protection::before {
+        background-image: url("../img/air-protection.jpg");
+      }
+
+      &.activities__link--land-use::before {
+        background-image: url("../img/land-use.jpg");
+      }
+
+      &.activities__link--consulting::before {
+        background-image: url("../img/consulting.jpg");
+      }
+
+      &.activities__link--waste-management::before {
+        background-image: url("../img/waste-management.jpg");
+      }
+
+      &.activities__link--impact-assessment::before {
+        background-image: url("../img/impact-assessment.jpg");
+      }
+    }
+  }
+
+  &--full {
+
+  }
+
+  @media (min-width: $md) {
+    &--images &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    &--images &__item {
+      box-sizing: border-box;
+      width: 50%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  @media (min-width: $lg) {
+    &--images &__item {
+      width: 33%;
+    }
+  }
+
+  @media (min-width: $xl) {
+    &--images &__item {
+      width: 20%;
+    }
+  }
+}
