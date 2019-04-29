@@ -1,0 +1,25 @@
+.page-main {
+  &__front {
+    background-image: url("../img/moss.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-color: black;
+  }
+
+  &__activities {
+    // background-image: url("../img/line-flowers-with-wind-lines-light.svg");
+    background-size: 50%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+
+  &__about {
+    background-color: #f5f5f5;
+  }
+
+  &__clients {
+    background-color: #f5f5f5;
+    // temp-----------------------
+    padding: 60px 0;
+  }
+}
