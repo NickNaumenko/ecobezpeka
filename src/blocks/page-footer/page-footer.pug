@@ -2,11 +2,16 @@ mixin page-footer
   footer.page-footer&attributes(attributes)
     .container
       .page-footer__content
-        +contacts
-        +directions
-        +socials
-
-      p
-      | &copy; 2016 |
-      i.fa.fa-value(aria-hidden='true') &nbsp;
-      a(href='#') View Source
+        .page-footer__top
+          .page-footer__col
+            h2.page-footer__section-title= l.contacts.title
+            +contacts
+          .page-footer__col
+            +activities({title: "page-footer__section-title"})
+          .page-footer__col
+            +socials({title: "page-footer__section-title"})
+        p.page-footer__copyright
+          span &copy; 2019
+          a.page-footer__copyright-link(href='https://nicknaumenko.github.io/', target="_blank", rel="noopener noreferrer") by
+            svg.page-footer__copyright-logo(width="25px" height="30")
+              use(xlink:href="#logo-nick")
