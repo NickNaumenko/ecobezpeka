@@ -1,7 +1,0 @@
-mixin activities(modifier= "")
-  section.activities&attributes(attributes)
-    h2.activities__title(class!=modifier.title) #{l.activities.title}
-    ul.activities__list
-      each val, index in l.activities.list
-        li.activities__item
-          a.activities__link(class=`activities__link--${index}` href=val.link) #{val.text}
