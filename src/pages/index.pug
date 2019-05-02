@@ -2,16 +2,22 @@ extends ../templates/template.pug
 block content
   +page-header("index.html")
   main.page-main
-    .container.page-main__directions
-      +front
-    .container.page-main__directions
-      +directions
-    .container.page-main__advantages
-      +advantages
-    .container.page-main__clients
-      +clients
-
-
-  //- h1 #{l.lang}
-  //- p #{l["main-menu"].home}
+    .page-main__front
+      .container
+        +front
+    .page-main__activities
+      .container
+        +activities(class="activities--images")
+    .page-main--dark-back
+      .container
+        +about
+    .page-main__advantages
+      .container
+        +advantages
+    .page-main--dark-back
+      .container
+        +clients
+    .page-main__news
+      .container
+        +news
   +page-footer
