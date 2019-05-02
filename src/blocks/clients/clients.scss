@@ -1,4 +1,12 @@
 .clients {
+  padding: 60px 0;
+  color: $fourth-color;
+
+  &__title {
+    @include section-header;
+    color: $fourth-color;
+  }
+
   &__list {
     @include list-style;
     display: flex;
@@ -7,7 +15,7 @@
   }
 
   &__item {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
   }
 
   &__link {
@@ -30,7 +38,19 @@
     text-align: center;
   }
 
-  @media (min-width: $tablet-width) {
+  // @media (min-width: $sm) {
+  //   &__list {
+  //     flex-direction: row;
+  //     flex-wrap: wrap;
+  //   }
+
+  //   &__item {
+  //     box-sizing: border-box;
+  //     width: 30%;
+  //   }
+  // }
+
+  @media (min-width: $md) {
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
@@ -42,6 +62,10 @@
     &__item {
       margin-bottom: 10px;
       padding: 0 30px;
+    }
+
+    &__logo {
+      max-width: 200px;
     }
 
     &__item-title {
