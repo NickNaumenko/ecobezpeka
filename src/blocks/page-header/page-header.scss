@@ -62,6 +62,17 @@
     right: 30px;
   }
 
+  &--light {
+    color: $fourth-color;
+    background-color: #fff;
+    box-shadow: $shadow;
+
+    .page-header__logo,
+    .page-header__contacts {
+      display: block;
+    }
+  }
+
   &.fixed {
     color: #fff;
     background: rgba($fourth-color, 0.9);

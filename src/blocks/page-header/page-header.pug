@@ -1,5 +1,5 @@
-mixin page-header(page)
-  header.page-header&attributes(attributes)
+mixin page-header(page, modifier)
+  header.page-header(class=modifier)&attributes(attributes)
     .container
       .page-header__content
         .page-header__top
