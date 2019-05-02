@@ -2,7 +2,7 @@ mixin contacts(modifier)
   address.contacts(class=modifier)&attributes(attributes)
     ul.contacts__list
       each val in l.contacts.list
-        li.contacts__item
+        li.contacts__item.animate
           case val.type
             when "phone"
               a.contacts__link.contacts__phone(href=`tel:${val.value}`) #{val.value.replace(/(\+\d{2})(\d{3})(\d{3})(\d{2})/, "$1 ($2) $3-$4-")}

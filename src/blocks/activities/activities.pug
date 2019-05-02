@@ -3,5 +3,5 @@ mixin activities(modifier= "")
     h2.activities__title(class!=modifier.title) #{l.activities.title}
     ul.activities__list
       each val, index in l.activities.list
-        li.activities__item
+        li.activities__item.animate
           a.activities__link(class=`activities__link--${index}` href=val.link) #{val.text}
