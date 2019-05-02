@@ -15,6 +15,7 @@ const cheerio = require("gulp-cheerio");
 const concat = require("gulp-concat");
 // const pug = require("gulp-pug");
 const pug = require("gulp-pug-i18n");
+const ghPages = require("gulp-gh-pages");
 
 const paths = {
   dirs: {
@@ -163,3 +164,8 @@ gulp.task("build", gulp.series(
 gulp.task("dev", gulp.series(
     "build", "server"
 ));
+
+gulp.task('deploy', function () {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
