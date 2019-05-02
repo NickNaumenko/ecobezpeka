@@ -1,0 +1,34 @@
+.features {
+  padding: 60px 0;
+
+  &__list {
+    @include list-style;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  @media (min-width: $md) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      box-sizing: border-box;
+      width: 45%;
+    }
+  }
+}

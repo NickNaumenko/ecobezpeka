@@ -1,0 +1,8 @@
+mixin features(modifier)
+  section.features
+    h2.visually-hidden= l.features.title
+    ul.features__list
+      each value, index in l.features.list
+        li(class=`features__item features__item--${index}`)
+          h3.features__item-title= value.h
+          p.features__text= value.p
