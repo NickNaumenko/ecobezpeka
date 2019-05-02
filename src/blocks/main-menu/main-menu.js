@@ -1,6 +1,8 @@
 /* eslint-disable curly */
 /* eslint-disable quotes */
 const menu = document.querySelector(".main-menu");
+const mq = window.matchMedia("(min-width: 992px)");
+
 let active = null;
 
 function select(target) {
@@ -42,10 +44,21 @@ function show(target) {
   dropdown.style.display = "inline-block";
 }
 
-menu.onclick = (event) => {
+function clickHandler(event) {
   const target = event.target.closest(".main-menu__dropdown-btn");
 
   if (!target) return;
 
   select(target);
-};
+}
+
+menu.onclick = clickHandler;
+
+mq.addListener(widthChange);
+widthChange(mq);
+
+function widthChange(mq) {
+  if (mq.matches) {
+    menu.onclick = null;
+  }
+}
