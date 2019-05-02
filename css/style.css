@@ -70,7 +70,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/moss.jpg");
   background-size: cover;
   background-position: bottom;
-  background-color: black; }
+  background-color: rgba(68, 81, 78, 0.8); }
 
 .page-main__activities {
   background-size: 50%;
@@ -736,6 +736,32 @@ input[type="radio"].visually-hidden {
 .description {
   padding: 60px 0; }
 
+.animate {
+  opacity: 0; }
+  .animate--in-view {
+    -webkit-animation: appear 0.8s ease-in-out both;
+            animation: appear 0.8s ease-in-out both; }
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
 @media (min-width: 540px) {
     .front__contacts {
       font-size: 16px; }
@@ -955,7 +981,9 @@ input[type="radio"].visually-hidden {
     .front__text-block {
       display: block;
       width: 50%;
-      margin-left: auto; }
+      margin-left: auto;
+      border-top-width: 3px;
+      border-bottom-width: 3px; }
     .front__text {
       font-size: 20px;
       line-height: normal; }
