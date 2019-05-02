@@ -3,12 +3,20 @@
 @import "scaffolding";
 
 // blocks
+@import "../blocks/page-main/page-main.scss";
 @import "../blocks/page-header/page-header.scss";
 @import "../blocks/toggle-button/toggle-button.scss";
 @import "../blocks/contacts/contacts.scss";
 @import "../blocks/main-menu/main-menu.scss";
 @import "../blocks/page-footer/page-footer.scss";
 @import "../blocks/socials/socials.scss";
-@import "../blocks/directions/directions.scss";
+@import "../blocks/activities/activities.scss";
 @import "../blocks/front/front.scss";
 @import "../blocks/logo/logo.scss";
+@import "../blocks/clients/clients.scss";
+@import "../blocks/about/about.scss";
+@import "../blocks/advantages/advantages.scss";
+@import "../blocks/news/news.scss";
+@import "../blocks/post/post.scss";
+@import "../blocks/features/features.scss";
+@import "../blocks/description/description";

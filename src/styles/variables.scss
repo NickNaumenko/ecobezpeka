@@ -1,9 +1,19 @@
-$tablet-width: 768px;
-
-$desktop-width: 1250px;
+$sm: 540px;
+$md: 768px;
+$lg: 992px;
+$xl: 1250px;
 
 $container-max-width: 1600px;
 
 // colors
-$primary-color: #0d6526;
-$secondary-color: #92BB22;
+$first-color: #0d6526;
+
+$second-color: #92BB22;
+
+$third-color: #22AA86;
+
+$fourth-color: #44514E;
+
+$font-color: #014215;
+
+$shadow: 0 5px 10px rgba(#000, 0.08);

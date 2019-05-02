@@ -1,7 +1,0 @@
-mixin directions(modifier)
-  section.directions&attributes(attributes)
-    h2 #{l.directions.title}
-    ul.directions__list
-      each val, index in l.directions.list
-        li.directions__item
-          a.directions__link(class=`directions__link--${index} ${modifier}` href=val.link) #{val.text}

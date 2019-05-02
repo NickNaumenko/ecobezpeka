@@ -48,7 +48,9 @@ const paths = {
     watch: ["./src/blocks/**/img/*"]
   },
   sprite: {
-    src: "./src/sprite/*.svg",
+    // src: "./src/sprite/*.svg",
+    // dest: "./build/img"
+    src: "./src/blocks/**/{logo*.svg,icon*.svg}",
     dest: "./build/img"
   },
   locales: {
