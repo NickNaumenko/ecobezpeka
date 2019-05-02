@@ -1,4 +1,8 @@
 .page-main {
+  &__description {
+    padding-top: 80px;
+  }
+
   &__front {
     background-image: url("../img/moss.jpg");
     background-size: cover;
@@ -13,13 +17,11 @@
     background-repeat: no-repeat;
   }
 
-  &__about {
+  &--dark-back {
     background-color: #f5f5f5;
   }
 
   &__clients {
     background-color: #f5f5f5;
-    // temp-----------------------
-    padding: 60px 0;
   }
 }
