@@ -3,15 +3,16 @@
   font: inherit;
 
   &--front {
-    font-size: 22px;
-    // text-shadow: 1px 1px 2px #000;
-
     .contacts__address {
       @include visually-hidden;
     }
 
-    .contacts__email {
-      font-size: 18px;
+    .contacts__phone {
+      letter-spacing: 2px;
+    }
+
+    .contacts__icon {
+      fill: currentColor;
     }
   }
 
@@ -30,10 +31,9 @@
 
   &__icon {
     position: absolute;
-    top: 5px;
+    top: 2px;
     left: 0;
 
-    // fill: currentColor;
     fill: $second-color;
   }
 

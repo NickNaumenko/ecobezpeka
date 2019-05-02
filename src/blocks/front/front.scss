@@ -1,11 +1,132 @@
 .front {
-  &__logo {
-    width: 300px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
 
-  @media (min-width: $tablet-width) {
+  &__logo {
+    width: 200px;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__contacts {
+    @include border-animation($second-color, 7px);
+
+    box-sizing: border-box;
+    padding: 20px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-shadow: 0 0 1px #000;
+
+    background-color: rgba($fourth-color, 0.2);
+
+    address {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+
+
+  &__title {
+    @include visually-hidden;
+  }
+
+  &__text-block {
+    display: none;
+  }
+
+  @media (min-width: $sm) {
+    &__contacts {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: $md) {
     &__content {
-      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__logo {
+      width: 250px;
+      margin-right: 110px;
+    }
+
+    &__text-block {
+      display: block;
+      padding: 30px 40px;
+
+      border-top: 2px solid white;
+      border-bottom: 2px solid white;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: $lg) {
+    &__content {
+      justify-content: flex-start;
+    }
+
+    &__logo {
+      width: 200px;
+      margin-right: 0;
+      padding: 0 50px;
+    }
+
+    &__contacts {
+      order: 1;
+    }
+
+    &__text-block {
+      display: block;
+      width: 50%;
+      margin-left: auto;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: normal;
+    }
+  }
+
+  @media (min-width: $xl) {
+    &__logo {
+      width: 333px;
+    }
+
+    &__contacts {
+      margin: 0 70px;
+    }
+
+    &__text-block {
+      width: 53%;
+    }
+
+    &__text {
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 1px;
     }
   }
 }

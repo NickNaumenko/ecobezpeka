@@ -1,7 +1,10 @@
 mixin front(modifier)
   section.front&attributes(attributes)
-    +logo("front__logo")(width="200")
-    +contacts("front__contacts")
-    .front__text
-      p.front__lead #{l.front.lead}
-      p.front__description #{l.front.description}
+    .front__content
+      +logo("front__logo")(src="../img/logo-big.svg")
+      section.front__contacts
+        h2.front__title #{l.contacts.title}
+        +contacts("contacts--front")
+      .front__text-block
+        p.front__text #{l.front.lead}
+        p.front__text #{l.front.description}
