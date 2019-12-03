@@ -25,7 +25,6 @@ function showVisible() {
 window.addEventListener("scroll", showVisible);
 showVisible();
 
-
 /* eslint-disable curly */
 /* eslint-disable quotes */
 const menu = document.querySelector(".main-menu");
@@ -90,6 +89,7 @@ function widthChange(mq) {
     menu.onclick = null;
   }
 }
+
 
 /* eslint-disable quotes */
 ;(function () {
